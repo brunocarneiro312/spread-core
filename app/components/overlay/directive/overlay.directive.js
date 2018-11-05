@@ -2,10 +2,10 @@
 
     'use strict';
 
-    angular.module('overlay.module')
-        .directive('overlay', Overlay);
+    angular.module('sprd.overlay.module')
+        .directive('sprdOverlay', sprdOverlay);
 
-    function Overlay()
+    function sprdOverlay()
     {
         return {
             restrict: 'E',

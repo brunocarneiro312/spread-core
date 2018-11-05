@@ -7,10 +7,10 @@
 
     'use strict';
 
-    angular.module('overlay.module')
-        .service('OverlayService', OverlayService);
+    angular.module('sprd.overlay.module')
+        .service('SprdOverlayService', SprdOverlayService);
 
-    function OverlayService()
+    function SprdOverlayService()
     {
         /** Variáveis */
         var isOverlay = undefined;

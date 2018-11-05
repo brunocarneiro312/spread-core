@@ -1,18 +1,18 @@
 (function() {
     'use strict';
 
-    angular.module('panel.module')
-        .directive('panelBody', PanelBody);
+    angular.module('sprd.panel.module')
+        .directive('sprdPanelBody', sprdPanelBody);
 
-    function PanelBody() {
+    function sprdPanelBody() {
         return {
             restrict: 'E',
             templateUrl: './views/panel-body.html',
-            controller: 'PanelController',
+            controller: 'SprdPanelController',
+            transclude: true,
             scope: {
                 test: '='
             },
-            transclude: true
         }
     }
 })();

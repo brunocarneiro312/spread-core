@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    angular.module('sprd.panel.module', [
+    angular.module('sprd.mask.module', [
 
     ]);
 

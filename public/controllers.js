@@ -1,18 +1,17 @@
 (function() {
     'use strict';
 
-    angular.module('panel.module')
-        .controller('PanelController', PanelController);
+    angular.module('sprd.mask.module')
+        .controller('SprdMaskController', SprdMaskController);
 
-    function PanelController($scope,
-                             PanelService) {
-
-        $scope.test = undefined;
+    function SprdMaskController($scope,
+                                SprdMaskService) {
 
         function init() {
-            console.log('PanelController');
+            console.log('SprdMaskController');
         }
         init();
+
     }
 })();
 /**
@@ -24,10 +23,10 @@
 
     'use strict';
 
-    angular.module('overlay.module')
-        .controller('OverlayController', OverlayController);
+    angular.module('sprd.overlay.module')
+        .controller('SprdOverlayController', SprdOverlayController);
 
-    function OverlayController($scope,
+    function SprdOverlayController($scope,
                                OverlayService) {
 
         $scope.applyOverlay  = applyOverlay;
@@ -62,4 +61,21 @@
         }
     }
 
+})();
+(function() {
+    'use strict';
+
+    angular.module('sprd.panel.module')
+        .controller('SprdPanelController', SprdPanelController);
+
+    function SprdPanelController($scope,
+                                 SprdPanelService) {
+
+        $scope.test = undefined;
+
+        function init() {
+            console.log('PanelController');
+        }
+        init();
+    }
 })();

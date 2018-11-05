@@ -1,10 +1,10 @@
 (function() {
     'use strict';
 
-    angular.module('panel.module')
-        .directive('panelFooter', PanelFooter);
+    angular.module('sprd.panel.module')
+        .directive('sprdPanelFooter', sprdPanelFooter);
 
-    function PanelFooter() {
+    function sprdPanelFooter() {
         return {
             restrict: 'E',
             templateUrl: './views/panel-footer.html',

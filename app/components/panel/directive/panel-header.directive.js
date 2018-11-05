@@ -1,10 +1,10 @@
 (function() {
     'use strict';
 
-    angular.module('panel.module')
-        .directive('panelHeader', PanelHeader);
+    angular.module('sprd.panel.module')
+        .directive('sprdPanelHeader', sprdPanelHeader);
 
-    function PanelHeader() {
+    function sprdPanelHeader() {
         return {
             restrict: 'E',
             templateUrl: './views/panel-header.html',

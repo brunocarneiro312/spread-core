@@ -1,11 +1,11 @@
 (function() {
     'use strict';
 
-    angular.module('panel.module')
-        .controller('PanelController', PanelController);
+    angular.module('sprd.panel.module')
+        .controller('SprdPanelController', SprdPanelController);
 
-    function PanelController($scope,
-                             PanelService) {
+    function SprdPanelController($scope,
+                                 SprdPanelService) {
 
         $scope.test = undefined;
 

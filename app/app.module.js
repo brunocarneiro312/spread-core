@@ -3,8 +3,9 @@
     'use strict';
 
     angular.module('app.module', [
-        'overlay.module',
-        'panel.module'
+        'sprd.overlay.module',
+        'sprd.panel.module',
+        'sprd.mask.module'
     ])
 
 })();

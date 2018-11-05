@@ -1,69 +1,35 @@
 (function() {
     'use strict';
 
-    angular.module('panel.module')
-        .directive('panelBody', PanelBody);
+    angular.module('sprd.mask.module')
+        .directive('sprdMask', sprdMask);
 
-    function PanelBody() {
+    function sprdMask() {
         return {
-            restrict: 'E',
-            templateUrl: './views/panel-body.html',
-            controller: 'PanelController',
-            scope: {
-                test: '='
-            },
-            transclude: true
+            require: "ngModel",
+            link: function(scope, element, attr, ctrl) {
+                element.bind('keyup', function() {
+                    ctrl.$setViewValue(_formatDate(ctrl.$viewValue));
+                    ctrl.$render();
+                });
+            }
         }
-    }
-})();
-(function() {
-    'use strict';
 
-    angular.module('panel.module')
-        .directive('panelFooter', PanelFooter);
+        /**
+         * Formata uma data no formato dd/mm/yyyy
+         * @param date
+         * @private
+         */
+        function _formatDate(date) {
+            date = date.replace(/[^0-9]+/g, "");
 
-    function PanelFooter() {
-        return {
-            restrict: 'E',
-            templateUrl: './views/panel-footer.html',
-            scope: {
-
-            },
-            transclude: true
-        }
-    }
-})();
-(function() {
-    'use strict';
-
-    angular.module('panel.module')
-        .directive('panelHeader', PanelHeader);
-
-    function PanelHeader() {
-        return {
-            restrict: 'E',
-            templateUrl: './views/panel-header.html',
-            scope: {
-
-            },
-            transclude: true
-        }
-    }
-})();
-(function() {
-    'use strict';
-
-    angular.module('panel.module')
-        .directive('panel', Panel);
-
-    function Panel() {
-        return {
-            restrict: 'E',
-            templateUrl: './views/panel.html',
-            scope: {
-
-            },
-            transclude: true
+            if (date.length > 2) {
+                date = date.substring(0, 2) + "/" + date.substring(2);
+            }
+            if (date.length > 5) {
+                date = date.substring(0, 5) + "/" + date.substring(5, 9);
+            }
+            return date;
         }
     }
 })();
@@ -71,10 +37,10 @@
 
     'use strict';
 
-    angular.module('overlay.module')
-        .directive('overlay', Overlay);
+    angular.module('sprd.overlay.module')
+        .directive('sprdOverlay', sprdOverlay);
 
-    function Overlay()
+    function sprdOverlay()
     {
         return {
             restrict: 'E',
@@ -88,4 +54,74 @@
         };
     }
 
+})();
+
+(function() {
+    'use strict';
+
+    angular.module('sprd.panel.module')
+        .directive('sprdPanelBody', sprdPanelBody);
+
+    function sprdPanelBody() {
+        return {
+            restrict: 'E',
+            templateUrl: './views/panel-body.html',
+            controller: 'SprdPanelController',
+            transclude: true,
+            scope: {
+                test: '='
+            },
+        }
+    }
+})();
+(function() {
+    'use strict';
+
+    angular.module('sprd.panel.module')
+        .directive('sprdPanelFooter', sprdPanelFooter);
+
+    function sprdPanelFooter() {
+        return {
+            restrict: 'E',
+            templateUrl: './views/panel-footer.html',
+            scope: {
+
+            },
+            transclude: true
+        }
+    }
+})();
+(function() {
+    'use strict';
+
+    angular.module('sprd.panel.module')
+        .directive('sprdPanelHeader', sprdPanelHeader);
+
+    function sprdPanelHeader() {
+        return {
+            restrict: 'E',
+            templateUrl: './views/panel-header.html',
+            scope: {
+
+            },
+            transclude: true
+        }
+    }
+})();
+(function() {
+    'use strict';
+
+    angular.module('sprd.panel.module')
+        .directive('sprdPanel', sprdPanel);
+
+    function sprdPanel() {
+        return {
+            restrict: 'E',
+            templateUrl: './views/panel.html',
+            scope: {
+
+            },
+            transclude: true
+        }
+    }
 })();

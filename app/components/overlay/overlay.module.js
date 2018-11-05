@@ -7,7 +7,7 @@
 
     'use strict';
 
-    angular.module('overlay.module', [
+    angular.module('sprd.overlay.module', [
 
     ]);
 

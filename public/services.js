@@ -1,17 +1,17 @@
 (function() {
     'use strict';
 
-    angular.module('panel.module')
-        .service('PanelService', PanelService);
+    angular.module('sprd.mask.module')
+        .service('SprdMaskService', SprdMaskService);
 
-    function PanelService() {
+    function SprdMaskService() {
 
         function init() {
-            console.log('PanelService');
+
         }
         init();
-    }
 
+    }
 })();
 /**
  * OverlayService
@@ -22,10 +22,10 @@
 
     'use strict';
 
-    angular.module('overlay.module')
-        .service('OverlayService', OverlayService);
+    angular.module('sprd.overlay.module')
+        .service('SprdOverlayService', SprdOverlayService);
 
-    function OverlayService()
+    function SprdOverlayService()
     {
         /** Variáveis */
         var isOverlay = undefined;
@@ -71,4 +71,19 @@
             return this.isOverlay;
         }
     }
+})();
+(function() {
+    'use strict';
+
+    angular.module('sprd.panel.module')
+        .service('SprdPanelService', SprdPanelService);
+
+    function SprdPanelService() {
+
+        function init() {
+            console.log('SprdPanelService');
+        }
+        init();
+    }
+
 })();

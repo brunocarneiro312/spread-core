@@ -1,13 +1,13 @@
 (function() {
     'use strict';
 
-    angular.module('panel.module')
-        .service('PanelService', PanelService);
+    angular.module('sprd.panel.module')
+        .service('SprdPanelService', SprdPanelService);
 
-    function PanelService() {
+    function SprdPanelService() {
 
         function init() {
-            console.log('PanelService');
+            console.log('SprdPanelService');
         }
         init();
     }

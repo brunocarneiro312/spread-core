@@ -7,10 +7,10 @@
 
     'use strict';
 
-    angular.module('overlay.module')
-        .controller('OverlayController', OverlayController);
+    angular.module('sprd.overlay.module')
+        .controller('SprdOverlayController', SprdOverlayController);
 
-    function OverlayController($scope,
+    function SprdOverlayController($scope,
                                OverlayService) {
 
         $scope.applyOverlay  = applyOverlay;

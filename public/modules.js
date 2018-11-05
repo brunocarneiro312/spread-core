@@ -3,15 +3,16 @@
     'use strict';
 
     angular.module('app.module', [
-        'overlay.module',
-        'panel.module'
+        'sprd.overlay.module',
+        'sprd.panel.module',
+        'sprd.mask.module'
     ])
 
 })();
 (function() {
     'use strict';
 
-    angular.module('panel.module', [
+    angular.module('sprd.mask.module', [
 
     ]);
 
@@ -25,7 +26,15 @@
 
     'use strict';
 
-    angular.module('overlay.module', [
+    angular.module('sprd.overlay.module', [
+
+    ]);
+
+})();
+(function() {
+    'use strict';
+
+    angular.module('sprd.panel.module', [
 
     ]);
 
