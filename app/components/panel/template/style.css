@@ -1,0 +1,19 @@
+.spread-panel {
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px #ddd;
+}
+.spread-panel-header {
+    background: #f5f5f5;
+    padding: 10px 15px;
+    font-size: 1.3em;
+    border-bottom: 1px solid #ddd;
+}
+.spread-panel-body {
+    background: white;
+    padding: 10px 15px;
+}
+.spread-panel-footer {
+    background: #f9f9f9;
+    padding: 10px 15px;
+    border-top: 1px dotted #ddd;
+}
